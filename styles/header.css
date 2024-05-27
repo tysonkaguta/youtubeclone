@@ -1,0 +1,235 @@
+.header-div
+{
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  flex-direction: row;
+  height: 55px;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(231, 229, 229);
+}
+.left-section
+{
+  width: 100px;
+  display: flex;
+  align-items: center;
+  
+}
+.menu-icon
+{
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.youtube-icon
+{
+  height: 20px;
+}
+.middle-section
+{
+  flex: 1;
+  margin-left: 70px ;
+  margin-right: 35px;  
+  height: 40px;
+  display: flex;
+  max-width: 500px;
+}
+.search-bar
+{
+  width: 0;
+  flex: 1;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: Arial;
+  font-size: 17px;
+  border-width: 1px;
+  border-color: rgb(231, 229, 229);
+  border-style: solid;
+  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+}
+.search-bar ::placeholder
+{
+  color: grey;
+  font-family: Arial;
+  font-size: 16px;
+}
+.search-icon
+{
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  background-color: rgb(231, 229, 229);
+  margin-left: -10px;
+  height: 20px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  margin-bottom: 2px;
+  margin-right: 10px;
+}
+.voice-search-icon
+{
+  height: 20px;
+  border: none;
+  background-color: rgb(231, 229, 229);
+  border-radius: 20px;
+  padding-bottom: 8px ;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+} 
+.right-section
+{
+  display: flex;
+  flex-shrink: 0;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  
+}
+.upload-icon,
+.youtubeapps-icon,
+.notifications-icon
+{
+   height: 24px;
+}
+.notifications-div
+{
+  position: relative;
+
+}
+.notifications-count
+{
+  position: absolute;
+  background-color: rgb(212, 10, 10);
+  color: white;
+  font-family: Arial;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  padding-left: 5px ;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  top: -2px;
+  right: -2px;
+}
+.profile-picture
+{
+  width: 35px;
+  margin-right: 15px;
+  border-radius: 17px;
+}
+a
+{
+  text-decoration: none;
+}
+.right-section a .signin
+{
+  padding: 1px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid rgb(67, 161, 192);
+  height: 33px;
+  gap: 3px;
+}
+
+.right-section a .signin img
+{
+  width: 27px;
+  height: 27px;
+}
+.right-section a .signin h3
+{
+  color: rgb(67, 161, 192);
+  font-size: 14px;
+}
+.my_account_div{
+  position: absolute;
+  top:110%; right:-110%;
+  width :15rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  padding:2rem;
+  border-radius: .5rem;
+  background: rgb(244, 241, 241);
+  text-align: center;
+}
+
+.my_account_div.active{
+  right:2rem;
+  transition: .4s linear;
+}
+
+.my_account_div .btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  border:.1rem solid black;
+  color:black;
+  cursor: pointer;
+  background: none;
+  background: rgb(67, 161, 192);
+}
+
+.my_account_div .btn:hover{
+  opacity: 0.9;
+  color:#fff;
+}
+/* Hide the actual file input1 */
+.input1[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/* Style the label1 to look like a button */
+.label1 {
+  display: block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Style the label1 when hovering */
+.label1:hover {
+  background-color: #45a049;
+}
+
+/* Style the label1 when the file input1 has focus */
+.input1[type="file"]:focus + .label1 {
+  outline: 2px solid #4CAF50;
+}
+
+/* Style the label1 when a file has been selected */
+.input1[type="file"]:valid + .label1 {
+  background-color: #008CBA;
+}
+
+/* Style the label1 text */
+.label1::after {
+  content: "Choose Profile IMage";
+}
+
+/* Style the label1 text when a file has been selected */
+.input1[type="file"]:valid + .label1::after {
+  content: attr(data-file-name);
+}

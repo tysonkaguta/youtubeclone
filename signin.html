@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+<style>
+    body{
+        font-family: Arial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .signin_div
+    {
+        font-family: Arial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:  1px solid lightgrey;
+        border-radius: 5px; 
+        width: 400px; 
+    }
+    .email, .password {
+        margin:20px 0;
+        position:relative;
+        display:inline-block;
+    }
+    .signinheader_div
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .signinheader_div img{
+        height: 60px;
+        width: 100px;
+    }
+    label {
+        padding:10px;
+        pointer-events: none;
+        position:absolute;
+        left:0;
+        top:0;
+        transition: 0.2s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        opacity:0.5;
+        color: rgb(29, 90, 223);
+        background: white;
+    }
+
+    input {
+        padding:10px;
+        width: 300px;
+    }
+
+    input:focus + label, input:not(:placeholder-shown) + label {
+        opacity:1;
+        transform: scale(0.75) translateY(-70%) translateX(-14px);
+    }
+    .signinbtns_div
+    {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    .signinbtns_div a
+    {
+        text-decoration: none;
+        font-size: small;
+        color: rgb(27, 6, 248);
+    }
+    .signinbtns_div button
+    {
+       color: white;
+       background-color: rgb(29, 90, 223);
+       border: none;
+       padding: 7px 15px; 
+       border-radius: 3px;
+    }
+    .signinbtns_div button:hover
+    {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    .show_pass{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+    .show_pass input
+    {
+        height: 20px;
+        width: 15px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="signin_div">
+        <div class="signinheader_div">
+            <img src="channel-pictures/google.png" alt="">
+            <h2>Sign in</h2>
+            <h5>to continue to YouTube</h5>
+        </div>
+        
+        <form>
+            <div class="email">
+                <input placeholder=" ">
+                <label>Email or phone</label>
+            </div> <br>
+            <div class="password">
+                <input placeholder=" ">
+                <label>Enter your password</label><br>                
+            </div>
+            <div class="show_pass">
+                <input type="checkbox"> <h5>Show password</h5>
+            </div>
+
+            <div class="signinbtns_div">
+                <a href="signup.html">Create account</a>
+                <button type="submit">Sign in</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
